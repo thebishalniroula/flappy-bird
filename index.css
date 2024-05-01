@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  height: 90vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+  color: aliceblue;
+}
+.game-over {
+  font-family: "Cinzel Decorative", serif;
+  font-size: medium;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.flappy-bird {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+  z-index: 100;
+  transition: all 0.5s linear;
+}
+
+.obstacle {
+  width: 50px;
+  background-color: red;
+  position: absolute;
+}
+
+.upper-obstacle {
+  top: 0;
+}
+
+.lower-obstacle {
+  bottom: 0;
+}
+
+.move-obstacle {
+  animation: moveObstacle 5s infinite linear forwards;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: aliceblue;
+  z-index: 200;
+}
+
+@keyframes moveObstacle {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
